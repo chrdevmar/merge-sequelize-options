@@ -1,4 +1,5 @@
 const merge = require('../index');
+const sequelize = require('sequelize');
 
 test('merges the order property', () => {
   const target = {
