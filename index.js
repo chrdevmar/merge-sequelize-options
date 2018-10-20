@@ -1,20 +1,20 @@
-const extractSimpleAttrs = require('./extractSimpleAttrs');
 const mergeOrder = require('./mergeOrder');
+
+const mergeWith = require('lodash/mergeWith');
 
 /**
  * merges n sequelize options objects
  * @param {object[]} targets 
  */
 function merge(...targets) {
-  // create array of objects containing just simple attributes
-  const simpleAttrs = extractSimpleAttrs(...targets);
-  const mergedOrder = mergeOrder(...targets);
-  const toMerge = {};
-  if(mergedOrder.length){
-    toMerge.order = mergedOrder
-  }
-  const merged = Object.assign({}, ...simpleAttrs, toMerge)
-  return merged;
+  return mergeWith(...targets, (accumulated, current, attrName) => {
+    switch(attrName){
+      case 'order':
+        return mergeOrder(accumulated, current);
+      default:
+        return current;
+    }
+  })
 }
 
-module.exports = merge;
+module.exports = merge
