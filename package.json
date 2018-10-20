@@ -1,0 +1,30 @@
+{
+  "name": "merge-sequelize-options",
+  "version": "1.0.0",
+  "description": "Utility for merging sequelize options objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScaredIbis/merge-sequelize-options.git"
+  },
+  "keywords": [
+    "merge",
+    "sequelize",
+    "options"
+  ],
+  "author": "Chris Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ScaredIbis/merge-sequelize-options/issues"
+  },
+  "homepage": "https://github.com/ScaredIbis/merge-sequelize-options#readme",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0",
+    "sequelize": "^4.40.0"
+  },
+  "dependencies": {}
+}
