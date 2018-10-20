@@ -6,7 +6,7 @@ const mergeWith = require('lodash/mergeWith');
  * merges n sequelize options objects
  * @param {object[]} targets 
  */
-function merge(...targets) {
+function mergeSequelizeOptions(...targets) {
   return mergeWith(...targets, (accumulated, current, attrName) => {
     switch(attrName){
       case 'order':
@@ -17,4 +17,4 @@ function merge(...targets) {
   })
 }
 
-module.exports = merge
+module.exports = mergeSequelizeOptions

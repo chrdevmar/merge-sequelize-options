@@ -5,8 +5,6 @@
  * @return {...[]} merged accumulated order options
  */
 function mergeOrder(accumulated, current){
-  // console.log('ACCUMULATED', accumulated);
-  // console.log('CURRENT', current)
   current.forEach(order => {
     // check if an order clause is already merged for this column name
     const existingClauseIndex = accumulated.findIndex(merged => merged[0] === order[0]);
