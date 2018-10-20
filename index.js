@@ -1,6 +1,6 @@
 const mergeOrder = require('./mergeOrder');
 
-const mergeWith = require('lodash/mergeWith');
+const mergeWith = require('lodash.mergewith');
 
 /**
  * merges n sequelize options objects
