@@ -1,6 +1,6 @@
 {
   "name": "merge-sequelize-options",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utility for merging sequelize options objects",
   "main": "index.js",
   "scripts": {
