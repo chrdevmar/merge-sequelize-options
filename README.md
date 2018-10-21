@@ -4,7 +4,7 @@ Utility for merging sequelize options objects.
 ## State of this package
 This package is far from complete. It is essentially a basic object merger at this stage. The approach is to implement logic for each of the main options attributes (The ones that don't have simple string or number values).
 
-Check the [issues](https://github.com/ScaredIbis/merge-sequelize-options/issues) page to see which -
+Check the [issues](https://github.com/ScaredIbis/merge-sequelize-options/issues) page to see which options need to be implemented
 
 
 
