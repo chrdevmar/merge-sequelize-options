@@ -1,12 +1,12 @@
 ## merge-sequelize-options
-Utility for merging sequelize options objects.
+Utility for merging ```n``` sequelize options objects. 
 
 ## State of this package
-This package is far from complete. It is essentially a basic object merger at this stage. The approach is to implement logic for each of the main options attributes (The ones that don't have simple string or number values).
+Custom merging logic is to be implemented for the different techniques and syntax variations of the various sequelize options.
+
+The default behaviour (when custom logic is not implemented) is to recursively merge source object(s) into target. Array and Plain Object attributes will be merged with those of subsequent sources, other type values will be overwritten.
 
 Check the [issues](https://github.com/ScaredIbis/merge-sequelize-options/issues) page to see which options need to be implemented
-
-
 
 ## Example Usage
 
@@ -29,6 +29,7 @@ Check the [issues](https://github.com/ScaredIbis/merge-sequelize-options/issues)
   }
 
   mergeSequelizeOptions(target, source)
+  // custom logic is implemented for basic order clause syntax
   // => 
   {
     limit: 25,
